@@ -50,7 +50,7 @@ app.use(
 // Cấu hình Facebook OAuth
 const CLIENT_ID = process.env.FB_CLIENT_ID || '990468299889119';
 const CLIENT_SECRET = process.env.FB_CLIENT_SECRET || 'd32ff8fc23f28eabd3672885ad916df2';
-const REDIRECT_URI = process.env.FB_REDIRECT_URI || `http://localhost:${PORT}/auth/facebook/callback`;
+const REDIRECT_URI = process.env.FB_REDIRECT_URI || `0.0.0.0:${PORT}/auth/facebook/callback`;
 
 // Route Facebook OAuth
 app.get('/auth/facebook', (req, res) => {
@@ -119,5 +119,5 @@ app.use('/', questionAndQuiz);
 
 // Khởi động server
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
 });
