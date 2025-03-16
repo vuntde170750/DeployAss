@@ -12,10 +12,7 @@ const connectDB = async () => {
       throw new Error("❌ MONGODB_URI không được định nghĩa. Kiểm tra file .env");
     }
 
-    await mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+   
 
     console.log("✅ Kết nối database thành công!");
   } catch (error) {
